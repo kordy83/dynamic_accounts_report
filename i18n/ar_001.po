@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-15 03:44+0000\n"
-"PO-Revision-Date: 2022-01-15 03:44+0000\n"
+"POT-Creation-Date: 2023-11-28 11:11+0000\n"
+"PO-Revision-Date: 2023-11-28 11:11+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,622 +16,890 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "0 - 30"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+msgid "1-30"
 msgstr ""
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "120 +"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+msgid "31-60"
 msgstr ""
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "30 - 60"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+msgid "61-90"
 msgstr ""
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "60 - 90"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+msgid "91-120"
 msgstr ""
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "90 - 120"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"fw-bolder ms-1\">\n"
+"                                    Expenses\n"
+"                                </span>"
+msgstr "نفقات"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-msgid ": Day Book"
-msgstr ": كتاب اليوم"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"fw-bolder ms-2\">\n"
+"                                    Income\n"
+"                                </span>"
+msgstr "دخل"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid ": Partner Ageing"
-msgstr ": شيخوخة الشريك"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"fw-bolder ms-2\">\n"
+"                                    Total Income\n"
+"                                </span>"
+msgstr "إجمالي الدخل"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-msgid ": Partner Ledger"
-msgstr ": شريك ليدجر"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"fw-bolder ms-2\">Total Expenses\n"
+"                                    </span>"
+msgstr "المصروفات الكلية"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-msgid ": Trial Balance"
-msgstr ": ميزان المراجعة"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"fw-bolder ms-3\">\n"
+"                                    Gross Profit\n"
+"                                </span>"
+msgstr "اجمالي الربح"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-msgid "<b>Report Date :</b>"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"fw-bolder\">\n"
+"                                    Net Profit\n"
+"                                </span>"
+msgstr "صافي الربح"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "<span>-</span>"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"ms-3\">Cost of\n"
+"                                    Revenue\n"
+"                                </span>"
+msgstr "ربح"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "<strong> As On Date:</strong>"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"ms-3\">Depreciation\n"
+"                                    </span>"
+msgstr "الاستهلاك"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid "<span class=\"ms-3\">Expenses</span>"
+msgstr "نفقات"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid "<span class=\"ms-3\">Operating Income</span>"
+msgstr "الدخل التشغيلي"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid ""
+"<span class=\"ms-3\">Other Income\n"
+"                                </span>"
+msgstr "مصدر دخل آخر"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+msgid "<span style=\"font-weight: 700;\">Purchase</span>"
+msgstr "شراء"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+msgid "<span style=\"font-weight: 700;\">Sales</span>"
+msgstr "مبيعات"
 
 #. module: dynamic_accounts_report
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 2%;\">\n"
+"                                        ASSETS\n"
+"                                    </span>"
+msgstr "أصول"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 2%;\">\n"
+"                                        EQUITY\n"
+"                                    </span>"
+msgstr "عدالة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 2%;\">\n"
+"                                        LIABILITIES\n"
+"                                    </span>"
+msgstr "الإلتزامات"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Current Assets\n"
+"                                    </span>"
+msgstr "الاصول المتداولة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Current Liabilities\n"
+"                                    </span>"
+msgstr "المطلوبات المتداولة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        LIABILITIES + EQUITY\n"
+"                                    </span>"
+msgstr "المطلوبات + حقوق الملكية"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Total Assets\n"
+"                                    </span>"
+msgstr "إجمالي الأصول"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Total Current Assets\n"
+"                                    </span>"
+msgstr "إجمالي الممتلكات الحالية"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Total Current Liabilities\n"
+"                                    </span>"
+msgstr "إجمالي الطلبات الحالية"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Total EQUITY\n"
+"                                    </span>"
+msgstr "مجموع الاسهم"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Total LIABILITIES\n"
+"                                    </span>"
+msgstr "اجمالي المطلوبات"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Total Unallocated Earnings\n"
+"                                    </span>"
+msgstr "إجمالي الأرباح غير المخصصة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"font-weight: bolder; margin-left: 4%;\">\n"
+"                                        Unallocated Earnings\n"
+"                                    </span>"
+msgstr "الأرباح غير المخصصة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Bank and Cash Accounts\n"
+"                                    </span>"
+msgstr "الحسابات المصرفية والنقدية"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Current Allocated Earnings\n"
+"                                    </span>"
+msgstr "الأرباح المخصصة الحالية"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Current Assets\n"
+"                                    </span>"
+msgstr "الاصول المتداولة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Current Earnings\n"
+"                                    </span>"
+msgstr "المكاسب الحاليه"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Current Liabilities\n"
+"                                    </span>"
+msgstr "المطلوبات المتداولة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Payables\n"
+"                                    </span>"
+msgstr "الذمم الدائنة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Plus Fixed Assets\n"
+"                                    </span>"
+msgstr "بالإضافة إلى الأصول الثابتة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Plus Non-current Assets\n"
+"                                    </span>"
+msgstr "بالإضافة إلى الأصول غير المتداولة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Plus Non-current Liabilities\n"
+"                                    </span>"
+msgstr "بالإضافة إلى الالتزامات غير المتداولة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Prepayments\n"
+"                                    </span>"
+msgstr "المدفوعات المسبقة"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Receivables\n"
+"                                    </span>"
+msgstr "المستحقات"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
+msgid ""
+"<span style=\"margin-left: 6%;\">Retained Earnings\n"
+"                                    </span>"
+msgstr "الأرباح المحتجزة"
+
+#. module: dynamic_accounts_report
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-msgid "<strong> From:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-msgid "<strong> To:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-msgid "<strong>Account Tags:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-msgid "<strong>Account Type:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-msgid "<strong>Accounts :</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-msgid "<strong>Accounts:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-msgid "<strong>Analytic Tag:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-msgid "<strong>Analytic:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-msgid "<strong>Date from :</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-msgid "<strong>Date to :</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-msgid "<strong>Journals:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-msgid "<strong>Level :</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "<strong>Partner Tag :</strong>"
+msgid ""
+"<span>Unknown\n"
+"                                                            Account\n"
+"                                                        </span>"
 msgstr ""
 
 #. module: dynamic_accounts_report
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-msgid "<strong>Partner Tags:</strong>"
+msgid ""
+"<span>Unknown\n"
+"                                                            Partner\n"
+"                                                        </span>"
 msgstr ""
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "<strong>Partners :</strong>"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "ASSETS"
+msgstr "أصول"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-msgid "<strong>Partners:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-msgid "<strong>Target move:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-msgid "<strong>To:</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-msgid "<strong>Total</strong>"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
 #, python-format
 msgid "Account"
-msgstr "الحساب"
+msgstr ""
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__account_tag_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__account_tag_ids
-msgid "Account Tags"
-msgstr "علامات الحساب"
+#: model:ir.model,name:dynamic_accounts_report.model_bank_book_report
+msgid "Account Bank Book Report"
+msgstr "تقرير كتاب حساب البنك"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#, python-format
-msgid "Account Tags:"
-msgstr "علامات الحساب:"
+#: model:ir.model,name:dynamic_accounts_report.model_cash_book_report
+msgid "Account Cash Book Report"
+msgstr "تقرير دفتر الحساب النقدي"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__account_type_ids
-#, python-format
-msgid "Account Type"
-msgstr "نوع الحساب"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#, python-format
-msgid "Account Type:"
-msgstr "نوع الحساب:"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__account_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__account_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__account_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__account_ids
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__account_ids
+#, python-format
 msgid "Accounts"
 msgstr "حسابات"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
 #, python-format
 msgid "Accounts:"
-msgstr "حسابات:"
+msgstr "حسابات"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_general_ledger__display_account__all
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_partner_ledger__display_account__all
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_trial_balance__display_account__all
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__dynamic_balance_sheet_report__display_account__all
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__dynamic_balance_sheet_report__target_move__all
-msgid "All"
-msgstr "الجميع"
+#: model:ir.actions.report,name:dynamic_accounts_report.action_print_aged_payable
+msgid "Age Payable"
+msgstr "العمر المستحق"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: model:ir.actions.report,name:dynamic_accounts_report.action_print_aged_receivable
+msgid "Age Receivable"
+msgstr "العمر المستحق"
+
+#. module: dynamic_accounts_report
+#: model:ir.actions.client,name:dynamic_accounts_report.action_aged_payable
+#: model:ir.ui.menu,name:dynamic_accounts_report.aged_payable_menu
+msgid "Aged Payable"
+msgstr "العمر المستحق"
+
+#. module: dynamic_accounts_report
+#: model:ir.model,name:dynamic_accounts_report.model_age_payable_report
+msgid "Aged Payable Report"
+msgstr "تقرير المسنين المستحق الدفع"
+
+#. module: dynamic_accounts_report
+#: model:ir.actions.client,name:dynamic_accounts_report.action_aged_receivable
+#: model:ir.ui.menu,name:dynamic_accounts_report.aged_receivable_menu
+msgid "Aged Receivable"
+msgstr "العمر المستحق"
+
+#. module: dynamic_accounts_report
+#: model:ir.model,name:dynamic_accounts_report.model_age_receivable_report
+msgid "Aged Receivable Report"
+msgstr "تقرير المستحقات القديمة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_day_book__target_move__all
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_general_ledger__target_move__all
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
 #, python-format
-msgid "All Entries"
-msgstr "كل المقالات"
+msgid "Amount Currency"
+msgstr "العملة كمية"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_day_book__target_move__posted
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_general_ledger__target_move__posted
-msgid "All Posted Entries"
-msgstr "جميع المشاركات المنشورة"
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__analytic_ids
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__analytic_ids
 msgid "Analytic Accounts"
-msgstr "حسابات تحليلية"
+msgstr "الحسابات التحليلية"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
 #, python-format
 msgid "Analytic Accounts:"
 msgstr "الحسابات التحليلية:"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__analytic_tag_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__analytic_tag_ids
-msgid "Analytic Tags"
-msgstr "العلامات التحليلية"
+#: model:ir.model.fields,help:dynamic_accounts_report.field_dynamic_balance_sheet_report__analytic_ids
+msgid "Analytic accounts associated with the current record."
+msgstr "الحسابات التحليلية المرتبطة بالسجل الحالي."
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#, python-format
-msgid "Analytic Tags:"
-msgstr "العلامات التحليلية:"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
 msgid "Apply"
 msgstr "يتقدم"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
 #, python-format
-msgid "As on Date"
-msgstr "كما اننا على موعد"
+msgid "At Date"
+msgstr "في التاريخ"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#, python-format
-msgid "As on Date :"
-msgstr "كما اننا على موعد :"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
 #, python-format
 msgid "Balance"
-msgstr "الرصيد"
+msgstr "توازن"
 
 #. module: dynamic_accounts_report
 #: model:ir.actions.client,name:dynamic_accounts_report.action_dynamic_balance_sheet
+#: model:ir.actions.report,name:dynamic_accounts_report.action_print_balance_sheet
 #: model:ir.ui.menu,name:dynamic_accounts_report.menu_balance_sheet_report
 msgid "Balance Sheet"
 msgstr "ورقة التوازن"
 
 #. module: dynamic_accounts_report
 #: model:ir.actions.client,name:dynamic_accounts_report.action_bank_book
+#: model:ir.actions.report,name:dynamic_accounts_report.action_print_bank_book
 #: model:ir.ui.menu,name:dynamic_accounts_report.menu_bank_book
 msgid "Bank Book"
 msgstr "كتاب البنك"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
 #, python-format
-msgid "Calendar"
-msgstr "تقويم"
+msgid ""
+"Bank and\n"
+"                                                    Cash Accounts"
+msgstr "الحسابات النقدية البنكية"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Bank and Cash Accounts"
+msgstr "الحسابات المصرفية والنقدية"
 
 #. module: dynamic_accounts_report
 #: model:ir.actions.client,name:dynamic_accounts_report.action_cash_book
 #: model:ir.ui.menu,name:dynamic_accounts_report.menu_cash_book
 msgid "Cash Book"
-msgstr "دفتر النقدية"
+msgstr "كتاب النقدية"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
-msgid "Cash Flow Statement"
-msgstr "بيان التدفقات النقدية"
+msgid "Cash basis method"
+msgstr "طريقة الأساس النقدي"
 
 #. module: dynamic_accounts_report
-#: model:ir.actions.client,name:dynamic_accounts_report.action_cash_flow
-#: model:ir.ui.menu,name:dynamic_accounts_report.menu_cash_flow
-msgid "Cash Flow Statements"
-msgstr "بيانات التدفق النقدي"
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-msgid "Cash Flow statements"
-msgstr "بيانات التدفق النقدي"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
 #, python-format
-msgid "Cash In"
-msgstr "التدفقات النقدية الداخلة"
+msgid "Communication"
+msgstr "تواصل"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-#, python-format
-msgid "Cash Out"
-msgstr "المصروفات"
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-msgid "Code"
-msgstr "رمز"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__company_id
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__company_id
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__company_id
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__company_id
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__company_id
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__company_id
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__company_id
 msgid "Company"
 msgstr "شركة"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_cash_flow__levels__consolidated
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
 #, python-format
-msgid "Consolidated"
-msgstr "موحّد"
+msgid "Comparison"
+msgstr "مقارنة"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__create_uid
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__create_uid
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"Cost\n"
+"                                                                of\n"
+"                                                                Revenue"
+msgstr "إيرادات التكلفة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"Cost of\n"
+"                                                        Revenue"
+msgstr "إيرادات التكلفة"
+
+#. module: dynamic_accounts_report
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__create_uid
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__create_uid
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__create_uid
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__create_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_payable_report__create_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_receivable_report__create_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_bank_book_report__create_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_cash_book_report__create_uid
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__create_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_tax_report__create_uid
 msgid "Created by"
 msgstr "انشأ من قبل"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__create_date
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__create_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__create_date
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__create_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__create_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__create_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_payable_report__create_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_receivable_report__create_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_bank_book_report__create_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_cash_book_report__create_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__create_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_tax_report__create_date
 msgid "Created on"
 msgstr "تم إنشاؤها على"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
 #, python-format
 msgid "Credit"
 msgstr "ائتمان"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#, python-format
 msgid "Currency"
 msgstr "عملة"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"Current\n"
+"                                                    Allocated Earnings"
+msgstr "الأرباح المخصصة الحالية"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"Current\n"
+"                                                    Assets"
+msgstr "الاصول المتداولة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"Current\n"
+"                                                    Earnings"
+msgstr "المكاسب الحاليه"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"Current Allocated\n"
+"                                                            Earnings"
+msgstr "الأرباح المخصصة الحالية"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Current Assets"
+msgstr "الاصول المتداولة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Current Liabilities"
+msgstr "المطلوبات المتداولة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
 #, python-format
 msgid "Date"
 msgstr "تاريخ"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#, python-format
+msgid ""
+"Date\n"
+"                                            :"
+msgstr "تاريخ"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
 #, python-format
 msgid "Date Range"
 msgstr "نطاق الموعد"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
@@ -639,92 +907,66 @@ msgid "Dates"
 msgstr "بلح"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: model:ir.actions.client,name:dynamic_accounts_report.action_day_book
-#: model:ir.actions.report,name:dynamic_accounts_report.action_print_day_book
-#: model:ir.ui.menu,name:dynamic_accounts_report.menu_report_daybook
-#, python-format
-msgid "Day Book"
-msgstr "كتاب اليوم"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.balance_sheet
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
 #, python-format
 msgid "Debit"
-msgstr "مدين"
+msgstr "دَين"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_cash_flow__levels__detailed
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
 #, python-format
-msgid "Detailed"
-msgstr "مفصلة"
+msgid "Depreciation"
+msgstr "الاستهلاك"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,help:dynamic_accounts_report.field_account_cash_flow__levels
-msgid ""
-"Different levels for cash flow statements \n"
-"Summary: Month wise report.\n"
-"Consolidated: Based on account types.\n"
-"Detailed: Based on accounts.\n"
-"Very Detailed: Accounts with their move lines"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__display_account
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__display_account
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__display_account
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__display_account
-msgid "Display Accounts"
-msgstr "عرض الحسابات"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__display_name
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__display_name
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__display_name
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__display_name
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__display_name
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__display_name
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_payable_report__display_name
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_receivable_report__display_name
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_bank_book_report__display_name
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_cash_book_report__display_name
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__display_name
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_tax_report__display_name
 msgid "Display Name"
 msgstr "اسم العرض"
 
 #. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-msgid "Due date"
-msgstr "تاريخ الاستحقاق"
+#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__dynamic_balance_sheet_report__target_move__draft
+msgid "Draft"
+msgstr "مسودة"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
 #, python-format
-msgid "DueDate"
+msgid "Due Date"
 msgstr "تاريخ الاستحقاق"
 
 #. module: dynamic_accounts_report
@@ -733,32 +975,54 @@ msgid "Dynamic Financial Reports"
 msgstr "التقارير المالية الديناميكية"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__date_to
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__date_to
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__date_to
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__date_to
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__date_to
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__date_to
-msgid "End Date"
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "EQUITY"
+msgstr "عدالة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"End\n"
+"                                                Date\n"
+"                                                :"
 msgstr "تاريخ الانتهاء"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
+#, python-format
+msgid "End Balance"
+msgstr "الرصيد النهائي"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
-msgid "End Date :"
-msgstr "تاريخ الانتهاء :"
+msgid ""
+"End Date\n"
+"                                            :"
+msgstr "تاريخ الانتهاء"
 
 #. module: dynamic_accounts_report
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__date_to
@@ -766,685 +1030,1283 @@ msgid "End date"
 msgstr "تاريخ الانتهاء"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
 #, python-format
-msgid "Entry Label"
-msgstr "بطاقة الدخول"
+msgid "End of Last Month"
+msgstr "نهاية الشهر الماضي"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#, python-format
+msgid "End of Last Quarter"
+msgstr "نهاية الربع الأخير"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#, python-format
+msgid "End of Last year"
+msgstr "نهاية العام الماضي"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#, python-format
+msgid "Entry label"
+msgstr "تسمية الإدخال"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#, python-format
+msgid "Expected Date"
+msgstr "التاريخ المتوقع"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid "Expenses"
+msgstr "نفقات"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
 msgid "Export (XLSX)"
 msgstr "تصدير (XLSX)"
 
 #. module: dynamic_accounts_report
-#: model:ir.actions.report,name:dynamic_accounts_report.action_print_balance_sheet
-msgid "Financial Report"
-msgstr "تقرير مالي"
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"General\n"
+"                                                                                Ledger"
+msgstr "دفتر الأستاذ العام"
 
 #. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"General\n"
+"                                                                    Ledger"
+msgstr "دفتر الأستاذ العام"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #: model:ir.actions.client,name:dynamic_accounts_report.action_general_ledger
+#: model:ir.actions.report,name:dynamic_accounts_report.action_print_general_ledger
 #: model:ir.ui.menu,name:dynamic_accounts_report.menu_general_ledger
+#, python-format
 msgid "General Ledger"
 msgstr "دفتر الأستاذ العام"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__id
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__id
+#: model:ir.model,name:dynamic_accounts_report.model_account_general_ledger
+msgid "General Ledger Report"
+msgstr ""
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#, python-format
+msgid "Generic Tax Report"
+msgstr "التقرير الضريبي العام"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid "Gross Profit"
+msgstr "اجمالي الربح"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#, python-format
+msgid "Group by: Account > Tax"
+msgstr "التجميع حسب: الحساب > الضريبة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#, python-format
+msgid "Group by: Tax > Account"
+msgstr "التجميع حسب: الضريبة > الحساب"
+
+#. module: dynamic_accounts_report
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__id
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__id
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__id
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__id
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_payable_report__id
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_receivable_report__id
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_bank_book_report__id
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_cash_book_report__id
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__id
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_tax_report__id
 msgid "ID"
 msgstr "بطاقة تعريف"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-#, python-format
-msgid "Initial Credit"
-msgstr "الائتمان الأولي"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance1
-#, python-format
-msgid "Initial Debit"
-msgstr "الخصم الأولي"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
-msgid "JRNL"
-msgstr ""
+msgid "Include Draft Entries"
+msgstr "تضمين مسودة الإدخالات"
 
 #. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid "Income"
+msgstr "دخل"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
+#, python-format
+msgid "Initial Balance"
+msgstr "الرصيد الافتتاحي"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#, python-format
+msgid "Invoice Date"
+msgstr "تاريخ الفاتورة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#, python-format
+msgid "JRNL"
+msgstr "JRNL"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
+#, python-format
 msgid "Journal"
 msgstr "مجلة"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__journal_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__journal_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__journal_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__journal_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__journal_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__journal_ids
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "Journal Items"
+msgstr "عناصر المجلة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__journal_ids
+#, python-format
 msgid "Journals"
 msgstr "المجلات"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
 #, python-format
 msgid "Journals:"
 msgstr "المجلات:"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow____last_update
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book____last_update
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger____last_update
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing____last_update
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger____last_update
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance____last_update
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report____last_update
-msgid "Last Modified on"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "LIABILITIES"
+msgstr "الإلتزامات"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__write_uid
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__write_uid
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "LIABILITIES + EQUITY"
+msgstr "المطلوبات + حقوق الملكية"
+
+#. module: dynamic_accounts_report
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__write_uid
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__write_uid
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__write_uid
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__write_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_payable_report__write_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_receivable_report__write_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_bank_book_report__write_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_cash_book_report__write_uid
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__write_uid
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_tax_report__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "آخر تحديث بواسطة"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__write_date
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__write_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__write_date
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__write_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__write_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__write_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_payable_report__write_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_age_receivable_report__write_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_bank_book_report__write_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_cash_book_report__write_date
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__write_date
+#: model:ir.model.fields,field_description:dynamic_accounts_report.field_tax_report__write_date
 msgid "Last Updated on"
+msgstr "آخر تحديث بتاريخ"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "Last month"
+msgstr "الشهر الماضي"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "Last quarter"
+msgstr "الربع الأخير"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "Last year"
+msgstr "العام الماضي"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#, python-format
+msgid "Matching Number"
+msgstr "رقم المطابقة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#, python-format
+msgid "Move"
+msgstr "يتحرك"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+#, python-format
+msgid "NET"
+msgstr "شبكة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid "Net Profit"
+msgstr "صافي الربح"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "No Comparison"
+msgstr "لا مقارنة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "Number of Periods:"
+msgstr "عدد الفترات:"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#, python-format
+msgid "Older"
+msgstr "اكبر سنا"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#, python-format
+msgid "Open"
+msgstr "يفتح"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"Operating\n"
+"                                                                Income"
+msgstr "الدخل التشغيلي"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"Operating\n"
+"                                                        Income"
+msgstr "الدخل التشغيلي"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
+#, python-format
+msgid "Options"
+msgstr "خيارات"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#, python-format
+msgid "Options : Posted Entries"
+msgstr "الخيارات: الإدخالات المنشورة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "Options : Posted Entries ,"
+msgstr "الخيارات: الإدخالات المنشورة،"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#, python-format
+msgid "Options :Posted Entries"
+msgstr "الخيارات: الإدخالات المنشورة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#, python-format
+msgid "Options :Posted Entries ,"
+msgstr "الخيارات:الإدخالات المنشورة،"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"Other\n"
+"                                                        Income"
 msgstr ""
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
 #, python-format
-msgid "Level:"
-msgstr "مستوى:"
+msgid "Other Income"
+msgstr "مصدر دخل آخر"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__levels
-msgid "Levels"
-msgstr "المستويات"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
 #: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
-#, python-format
-msgid "Move"
-msgstr "نقل"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.cash_flow
-#, python-format
-msgid "Name"
-msgstr "اسم"
-
-#. module: dynamic_accounts_report
-#: code:addons/addons_2/dynamic_accounts_report/wizard/balance_sheet.py:0
-#: code:addons/addons_2/dynamic_accounts_report/wizard/daybook.py:0
-#: code:addons/addons_2/dynamic_accounts_report/wizard/general_ledger.py:0
-#: code:addons/addons_2/dynamic_accounts_report/wizard/partner_leadger.py:0
-#: code:addons/addons_2/dynamic_accounts_report/wizard/trial_balance.py:0
-#: code:addons/dynamic_accounts_report/wizard/balance_sheet.py:0
-#: code:addons/dynamic_accounts_report/wizard/daybook.py:0
-#: code:addons/dynamic_accounts_report/wizard/general_ledger.py:0
-#: code:addons/dynamic_accounts_report/wizard/partner_leadger.py:0
-#: code:addons/dynamic_accounts_report/wizard/trial_balance.py:0
-#, python-format
-msgid "No Accounts Found! Please Add One"
-msgstr "لا توجد حسابات! الرجاء إضافة واحد"
-
-#. module: dynamic_accounts_report
-#: code:addons/addons_2/dynamic_accounts_report/wizard/daybook.py:0
-#: code:addons/dynamic_accounts_report/wizard/daybook.py:0
-#, python-format
-msgid "No journals Found!"
-msgstr "لم يتم العثور على مجلات!"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
-#, python-format
-msgid "Not Due"
-msgstr "غير مستحق"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__partner_ids
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__partner_ids
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.day_book
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
 #, python-format
 msgid "Partner"
 msgstr "شريك"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: model:ir.actions.client,name:dynamic_accounts_report.action_ageing_partner
-#: model:ir.actions.report,name:dynamic_accounts_report.action_print_ageing_partner
-#: model:ir.ui.menu,name:dynamic_accounts_report.menu_report_ageing
-#, python-format
-msgid "Partner Ageing"
-msgstr "شيخوخة الشريك"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: model:ir.actions.client,name:dynamic_accounts_report.action_partner_ledger
-#: model:ir.ui.menu,name:dynamic_accounts_report.menu_partner_ledger
-#, python-format
-msgid "Partner Ledger"
-msgstr "شريك ليدجر"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__partner_category_ids
-msgid "Partner Tag"
-msgstr "علامة الشريك"
-
-#. module: dynamic_accounts_report
 #: model:ir.actions.report,name:dynamic_accounts_report.action_print_partner_ledger
-msgid "Partner ledger"
+#: model:ir.ui.menu,name:dynamic_accounts_report.menu_partner_ledger
+msgid "Partner Ledger"
 msgstr "دفتر الأستاذ الشريك"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
+#: model:ir.model,name:dynamic_accounts_report.model_account_partner_ledger
+msgid "Partner Ledger Report"
+msgstr "تقرير دفتر الأستاذ الشريك"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #, python-format
-msgid "Partner tag:"
-msgstr "علامة الشريك:"
+msgid "Payable"
+msgstr "مستحق الدفع"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__partner_category_ids
-msgid "Partner tags"
-msgstr "علامات الشريك"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__result_selection
-msgid "Partner's"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
 #, python-format
-msgid "Partners:"
-msgstr "الشركاء:"
+msgid "Payables"
+msgstr "الذمم الدائنة"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_partner_ageing__result_selection__supplier
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
 #, python-format
-msgid "Payable Accounts"
-msgstr "حسابات الدفع"
+msgid ""
+"Plus\n"
+"                                                    Non-current Assets"
+msgstr "بالإضافة إلى الأصول غير المتداولة"
 
 #. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__period_length
-msgid "Period Length (days)"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"Plus\n"
+"                                                    Non-current Liabilities"
+msgstr "بالإضافة إلى الالتزامات غير المتداولة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"Plus Fixed\n"
+"                                                    Assets"
+msgstr "بالإضافة إلى الأصول الثابتة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Plus Fixed Assets"
+msgstr "بالإضافة إلى الأصول الثابتة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Plus Non-current Assets"
+msgstr "بالإضافة إلى الأصول غير المتداولة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Plus Non-current Liabilities"
+msgstr "بالإضافة إلى الالتزامات غير المتداولة"
 
 #. module: dynamic_accounts_report
 #: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__dynamic_balance_sheet_report__target_move__posted
 msgid "Posted"
-msgstr "تم النشر"
+msgstr "نشر"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
+msgid "Posted ,"
+msgstr "تم النشر ,"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
 #, python-format
 msgid "Posted Entries"
-msgstr "إدخالات منشورة"
+msgstr "المشاركات المنشورة"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Prepayments"
+msgstr "المدفوعات المسبقة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "Previous Period"
+msgstr "Previous Period"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
 msgid "Print (PDF)"
-msgstr "طباعة (PDF)"
+msgstr "طباعة (بي دي إف)"
+
+#. module: dynamic_accounts_report
+#: model:ir.actions.report,name:dynamic_accounts_report.action_print_profit_loss
+msgid "Profit And Loss"
+msgstr "الربح والخسارة"
+
+#. module: dynamic_accounts_report
+#: model:ir.model,name:dynamic_accounts_report.model_dynamic_balance_sheet_report
+msgid "Profit Loss Report"
+msgstr ""
 
 #. module: dynamic_accounts_report
 #: model:ir.actions.client,name:dynamic_accounts_report.action_dynamic_profit_and_loss
 #: model:ir.ui.menu,name:dynamic_accounts_report.menu_profit_and_loss_report
 msgid "Profit and Loss"
-msgstr "الربح والخسارة"
+msgstr "تقرير خسارة الربح"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_partner_ageing__result_selection__customer
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
 #, python-format
-msgid "Receivable Accounts"
-msgstr "حسابات القبض"
+msgid "Purchase"
+msgstr "شراء"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_partner_ageing__result_selection__customer_supplier
-#, python-format
-msgid "Receivable and Payable Accounts"
-msgstr "حسابات القبض والذمم الدائنة"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__reconciled
-msgid "Reconcile Type"
-msgstr "نوع التوفيق"
-
-#. module: dynamic_accounts_report
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
-msgid "Ref"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.actions.report,name:dynamic_accounts_report.action_print_General_ledger
-msgid "Report"
-msgstr "نقل"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__today
-msgid "Report Date"
-msgstr "تاريخ التقرير"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__date_from
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__date_from
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__date_from
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__date_from
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__date_from
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__date_from
-msgid "Start Date"
-msgstr "تاريخ البدء"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#, python-format
+msgid "Receivable"
+msgstr "مستحق"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Receivables"
+msgstr "المستحقات"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#, python-format
+msgid "Ref"
+msgstr "المرجع"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#, python-format
+msgid "Reference"
+msgstr "مرجع"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+msgid "Report"
+msgstr "تقرير"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#, python-format
+msgid "Reports :"
+msgstr "التقارير"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid ""
+"Retained\n"
+"                                                    Earnings"
+msgstr "الأرباح المحتجزة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Retained Earnings"
+msgstr "الأرباح المحتجزة"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#, python-format
+msgid "Sales"
+msgstr "مبيعات"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
 #, python-format
-msgid "Start Date :"
+msgid "Same Period Last Year"
+msgstr "نفس الفترة من العام الماضي"
+
+#. module: dynamic_accounts_report
+#: model:ir.model.fields,help:dynamic_accounts_report.field_dynamic_balance_sheet_report__account_ids
+msgid "Select one or more accounts."
+msgstr "حدد حسابًا واحدًا أو أكثر."
+
+#. module: dynamic_accounts_report
+#: model:ir.model.fields,help:dynamic_accounts_report.field_dynamic_balance_sheet_report__journal_ids
+msgid "Select one or more journals."
+msgstr "اختر مجلة واحدة أو أكثر."
+
+#. module: dynamic_accounts_report
+#: model:ir.model.fields,help:dynamic_accounts_report.field_dynamic_balance_sheet_report__company_id
+msgid "Select the company to which this record belongs."
+msgstr "حدد الشركة التي ينتمي إليها هذا السجل."
+
+#. module: dynamic_accounts_report
+#: model:ir.model.fields,help:dynamic_accounts_report.field_dynamic_balance_sheet_report__target_move
+msgid "Select the target move status."
+msgstr "حدد حالة التحرك المستهدف."
+
+#. module: dynamic_accounts_report
+#: model:ir.model.fields,help:dynamic_accounts_report.field_dynamic_balance_sheet_report__date_to
+msgid "Specify the end date."
+msgstr "حدد تاريخ الانتهاء."
+
+#. module: dynamic_accounts_report
+#: model:ir.model.fields,help:dynamic_accounts_report.field_dynamic_balance_sheet_report__date_from
+msgid "Specify the start date."
+msgstr "حدد تاريخ البدء."
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"Start\n"
+"                                                Date :"
+msgstr "تاريخ البدء :"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid ""
+"Start\n"
+"                                            Date :"
 msgstr "تاريخ البدء :"
 
 #. module: dynamic_accounts_report
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__date_from
 msgid "Start date"
-msgstr ""
+msgstr "تاريخ البدء"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_cash_flow__levels__summary
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
 #, python-format
-msgid "Summary"
-msgstr "ملخص"
+msgid "TAX"
+msgstr "ضريبة"
 
 #. module: dynamic_accounts_report
 #: model:ir.model.fields,field_description:dynamic_accounts_report.field_dynamic_balance_sheet_report__target_move
 msgid "Target Move"
-msgstr "الهدف نقل"
+msgstr "تحرك الهدف"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid "Target Move:"
+msgstr "تحرك الهدف:"
+
+#. module: dynamic_accounts_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.profit_loss
+msgid "Target move"
+msgstr "تحرك الهدف"
+
+#. module: dynamic_accounts_report
+#: model:ir.actions.client,name:dynamic_accounts_report.action_tax_report
+#: model:ir.actions.report,name:dynamic_accounts_report.action_print_tax_report
+#: model:ir.model,name:dynamic_accounts_report.model_tax_report
+#: model:ir.ui.menu,name:dynamic_accounts_report.tax_report_menu
+msgid "Tax Report"
+msgstr "تقرير الضرائب"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "This Quarter"
+msgstr "هذا الربع"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/tax_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#, python-format
+msgid "This Year"
+msgstr "هذا العام"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#, python-format
+msgid "Today"
+msgstr "اليوم"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
 #: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#, python-format
-msgid "Target Move:"
-msgstr "نقل الهدف:"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_cash_flow__target_move
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_day_book__target_move
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__target_move
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ageing__target_move
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_partner_ledger__target_move
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_trial_balance__target_move
-msgid "Target Moves"
-msgstr "الحركات الهدف"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields,field_description:dynamic_accounts_report.field_account_general_ledger__titles
-msgid "Title"
-msgstr "عنوان"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ageing
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_payable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.aged_receivable
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
 #, python-format
 msgid "Total"
-msgstr "مجموع"
+msgstr ""
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid ""
+"Total\n"
+"                                                    Expenses"
+msgstr "المصروفات الكلية"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Total ASSETS"
+msgstr "إجمالي الأصول"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Total Current Assets"
+msgstr "إجمالي الممتلكات الحالية"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Total Current Liabilities"
+msgstr "إجمالي الطلبات الحالية"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Total EQUITY"
+msgstr "مجموع الاسهم"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid "Total Income"
+msgstr "إجمالي الدخل"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Total LIABILITIES"
+msgstr "اجمالي المطلوبات"
+
+#. module: dynamic_accounts_report
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Total Unallocated Earnings"
+msgstr "إجمالي الأرباح غير المخصصة"
+
+#. module: dynamic_accounts_report
 #: model:ir.actions.client,name:dynamic_accounts_report.action_trial_balance
 #: model:ir.actions.report,name:dynamic_accounts_report.action_print_trial_balance
 #: model:ir.ui.menu,name:dynamic_accounts_report.menu_trial_balance
-#, python-format
 msgid "Trial Balance"
 msgstr "ميزان المراجعة"
 
 #. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#, python-format
-msgid "Unfolded"
-msgstr "تكشفت"
-
-#. module: dynamic_accounts_report
-#: code:addons/addons_2/dynamic_accounts_report/wizard/ageing.py:0
-#: code:addons/dynamic_accounts_report/wizard/ageing.py:0
-#, python-format
-msgid "Unknown Partner"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_partner_ledger__reconciled__unreconciled
-msgid "Unreconciled Only"
-msgstr "غير المصالحة فقط"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_view.xml:0
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_cash_flow__levels__very
-#, python-format
-msgid "Very Detailed"
-msgstr "مفصل جدا"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/financial_reports_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/trial_balance_view.xml:0
-#, python-format
-msgid "View General Ledger"
-msgstr "مشاهدة ملف دفتر الأستاذ العام"
-
-#. module: dynamic_accounts_report
-#. openerp-web
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/addons_2/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/ageing.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/daybook.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
-#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
-#, python-format
-msgid "View Source move"
-msgstr "عرض نقل المصدر"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_general_ledger__display_account__not_zero
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_partner_ledger__display_account__not_zero
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_trial_balance__display_account__not_zero
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__dynamic_balance_sheet_report__display_account__not_zero
-msgid "With balance is not equal to 0"
-msgstr "مع رصيد لا يساوي 0"
-
-#. module: dynamic_accounts_report
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_general_ledger__display_account__movement
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_partner_ledger__display_account__movement
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__account_trial_balance__display_account__movement
-#: model:ir.model.fields.selection,name:dynamic_accounts_report.selection__dynamic_balance_sheet_report__display_account__movement
-msgid "With movements"
-msgstr "مع الحركات"
-
-#. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_account_cash_flow
-msgid "account.cash.flow"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_account_day_book
-msgid "account.day.book"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_account_general_ledger
-msgid "account.general.ledger"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_account_partner_ageing
-msgid "account.partner.ageing"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_account_partner_ledger
-msgid "account.partner.ledger"
-msgstr ""
-
-#. module: dynamic_accounts_report
 #: model:ir.model,name:dynamic_accounts_report.model_account_trial_balance
-msgid "account.trial.balance"
-msgstr ""
+msgid "Trial Balance Report"
+msgstr "تقرير ميزان المراجعة"
 
 #. module: dynamic_accounts_report
-#: model:ir.actions.report,name:dynamic_accounts_report.action_print_cash_flow
-msgid "cash_flow"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#, python-format
+msgid "Unallocated Earnings"
+msgstr "الأرباح غير المخصصة"
 
 #. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_dynamic_balance_sheet_report
-msgid "dynamic.balance.sheet.report"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/balance_sheet_template.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/profit_and_loss_templates.xml:0
+#, python-format
+msgid "Unfold All"
+msgstr "تتكشف الكل"
 
 #. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_report_dynamic_accounts_report_balance_sheet
-msgid "report.dynamic_accounts_report.balance_sheet"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#, python-format
+msgid ""
+    "Unknown\n"
+"                                                                    Accounts"
+msgstr "حسابات غير معروفة"
 
 #. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_report_dynamic_accounts_report_cash_flow
-msgid "report.dynamic_accounts_report.cash_flow"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#, python-format
+msgid ""
+"Unknown\n"
+"                                                                    Partner"
+msgstr "شريك غير معروف"
 
 #. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_report_dynamic_accounts_report_day_book
-msgid "report.dynamic_accounts_report.day_book"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_payable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/aged_receivable_report_views.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/bank_flow_templates.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/cash_flow_templates.xml:0
+#, python-format
+msgid ""
+"View\n"
+"                                                                        Journal\n"
+"                                                                        Entry"
+msgstr "عرض إدخال دفتر اليومية"
 
 #. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_report_dynamic_accounts_report_general_ledger
-msgid "report.dynamic_accounts_report.general_ledger"
-msgstr ""
+#. odoo-javascript
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/cust1/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/general_ledger_view.xml:0
+#: code:addons/dynamic_accounts_report/static/src/xml/partner_ledger_view.xml:0
+#, python-format
+msgid ""
+"View\n"
+"                                                                    Journal\n"
+"                                                                    Entry"
+msgstr "عرض إدخال دفتر اليومية"
 
 #. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_report_dynamic_accounts_report_partner_ageing
-msgid "report.dynamic_accounts_report.partner_ageing"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+msgid "posted,"
+msgstr "نشر"
 
 #. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_report_dynamic_accounts_report_partner_ledger
-msgid "report.dynamic_accounts_report.partner_ledger"
-msgstr ""
-
-#. module: dynamic_accounts_report
-#: model:ir.model,name:dynamic_accounts_report.model_report_dynamic_accounts_report_trial_balance
-msgid "report.dynamic_accounts_report.trial_balance"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.bank_book
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.general_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.partner_ledger
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.tax_report
+#: model_terms:ir.ui.view,arch_db:dynamic_accounts_report.trial_balance
+msgid "to"
+msgstr "ل"

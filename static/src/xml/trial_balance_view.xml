@@ -1,307 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <templates>
-    <t t-name="TrialTemp">
-        <div class="">
-            <div class="">
-                <h1 style="padding:10px">
-                    Trial Balance
-                </h1>
+    <t t-name="trl_b_template_new" owl="1">
+        <!-- Section contains a structure for the Trial Balance report, including a filter
+        view and a table view. It has div elements for the filter view and table view,
+         with respective classes for styling.-->
+        <div class="w-100">
+            <div class="fin_report">
+                <!--  Filter View  -->
+                <div class="filter_view_gl">
+                    <div class="">
+                        <h1 style="padding:10px">
+                            <t t-esc="props.action.name"/>
+                        </h1>
+                    </div>
+                    <div style="margin-right: 10px; margin-left: 10px;margin-bottom: 15px;display: flex;">
+                        <div class="sub_container_left" style="width:70%;">
+                            <div class="report_print">
+                                <!-- Print (PDF) Button -->
+                                <button type="button"
+                                        class="btn btn-info btn-report-print"
+                                        t-on-click="printPdf"
+                                        style="margin-right: 8px;">
+                                    Print (PDF)
+                                </button>
+                                <!-- Export (XLSX) Button -->
+                                <button type="button"
+                                        class="btn btn-info btn-report-print"
+                                        t-on-click="print_xlsx">
+                                    Export (XLSX)
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sub_container_right">
+                            <!-- Time Range -->
+                            <div class="time_range" style="">
+                                <a type="button" class="dropdown-toggle"
+                                   data-bs-toggle="dropdown">
+                                    <!-- Date Range Dropdown -->
+                                    <span class="fa fa-calendar" title="Dates"
+                                          role="img"
+                                          aria-label="Dates"/>
+                                    Date Range
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <!-- Date Range Options -->
+                                    <div class="list-group">
+                                        <!-- This Month Button -->
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'month'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            This Month
+                                        </button>
+                                        <!-- This Quarter Button -->
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'quarter'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            This Quarter
+                                        </button>
+                                        <!-- This Year Button -->
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'year'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            This Year
+                                        </button>
+                                        <!-- Separator -->
+                                        <div role="separator"
+                                             class="dropdown-divider"/>
+                                        <!-- Last Month Button -->
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'last-month'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            Last month
+                                        </button>
+                                        <!-- Last Quarter Button -->
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'last-quarter'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            Last quarter
+                                        </button>
+                                        <!-- Last Year Button -->
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'last-year'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            Last year
+                                        </button>
+                                        <!-- Separator -->
+                                        <div role="separator"
+                                             class="dropdown-divider"/>
+                                        <!-- Start Date -->
+                                        <label class="" for="date_from">Start
+                                            Date :
+                                        </label>
+                                        <div class="input-group date"
+                                             data-target-input="nearest">
 
-            </div>
-
-            <div>
-                <div class="filter_view_tb"></div>
-            </div>
-            <br></br>
-            <div>
-                <div class="table_view_tb" style="right:20px;"></div>
-            </div>
-        </div>
-    </t>
-    <t t-name="TrialTable">
-        <div>
-            <div class="table_main_view">
-                <table cellspacing="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th colspan="6">Account</th>
-                            <t t-if="filter['date_from']">
-                                <th class="mon_fld">Initial Debit</th>
-                                <th class="mon_fld">Initial Credit</th>
-
-                            </t>
-                            <th class="mon_fld">Debit</th>
-                            <th class="mon_fld">Credit</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <t t-set="none_value" t-value="_"/>
-                        <t t-foreach="report_lines" t-as="account">
-                            <t t-set="common_id" t-value="0"/>
-                            <tr style="border: 1.5px solid black;" class="gl-line"
-                                data-bs-toggle="collapse"
-                                t-att-data-account-id="account['id']"
-                                t-attf-data-target=".a{{account['id']}}">
-                                <td colspan="6" style="border: 0px solid black;">
-                                    <span>
-                                        <t t-esc="account['code']"/>
-                                        -
-                                        <t t-esc="account['name']"/>
-                                    </span>
-                                    <div class="" style="display: inline-block;">
-                                        <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown"
-                                           aria-expanded="false">
-                                        </a>
-                                        <div class="dropdown-menu " role="menu">
-                                            <div class="o_foldable_menu o_closed_menu ">
-                                                <div class="form-group ">
-                                                    <div class="show-gl" aria-atomic="true" id="" data-target-input="">
-                                                        <li role="presentation">
-                                                            <a role="menuitem" style="background-color:aqua; font-weight:bold;"
-                                                               t-att-data-account-id="account['id']" class="show-gl">
-                                                                View General Ledger
-                                                            </a>
-                                                        </li>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                            <input type="date" id="start_date"
+                                                   t-on-change="applyFilter"
+                                                   t-ref="date_from"
+                                                   style="border:none;border-bottom: 1px solid #000;padding: 5px;outline: none;"
+                                                   name="start_date"/>
+                                        </div>
+                                        <!-- End Date -->
+                                        <label class="" for="date_to">End Date
+                                            :
+                                        </label>
+                                        <div class="input-group date"
+                                             data-target-input="nearest">
+                                            <input type="date" id="end_date"
+                                                   t-on-change="applyFilter"
+                                                   t-ref="date_to"
+                                                   style="border:none;border-bottom: 1px solid #000;padding: 5px;outline: none;"
+                                                   name="end_date"/>
                                         </div>
                                     </div>
-                                </td>
-                                <t t-if="filter['date_from']">
-                                    <t t-if="account['Init_balance']">
-                                        <t t-if="currency[1] == 'before'">
+                                </div>
+                            </div>
+                            <div class="comparison_range" style="">
+                                <a type="button" class="dropdown-toggle"
+                                   data-bs-toggle="dropdown">
+                                    <span class="fa fa-signal"
+                                          title="Comparison"
+                                          role="img"
+                                          aria-label="Comparison"/>
+                                    Comparison
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="list-group">
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'no comparison'"
+                                                type="button"
+                                                t-on-click="applyComparison">
+                                            No Comparison
+                                        </button>
+                                        <div role="separator"
+                                             class="dropdown-divider"/>
+                                        <label class="" for="periods"
+                                               style="display: flex;padding: 4px 20px;color: #000;">
+                                            Previous Period
+                                            <br/>
+                                            Number of Periods:
+                                        </label>
+                                        <div class="input-group comparison"
+                                             data-target-input="nearest">
 
-                                            <td class="mon_fld">
-                                                <t t-esc="currency[0]"/>
-                                                <t t-raw="account['Init_balance']['debit']"/>
-                                            </td>
-                                            <td class="mon_fld">
-                                                <t t-esc="currency[0]"/>
-                                                <t t-raw="account['Init_balance']['credit']"/>
-                                            </td>
-                                        </t>
-                                        <t t-else="">
-                                            <td class="mon_fld">
-                                                <t t-raw="account['Init_balance']['debit']"/>
-                                                <t t-esc="currency[0]"/>
-                                            </td>
-                                            <td class="mon_fld">
-                                                <t t-raw="account['Init_balance']['credit']"/>
-                                                <t t-esc="currency[0]"/>
-                                            </td>
-
-
-                                        </t>
-                                    </t>
-                                    <t t-else="">
-                                        <t t-if="currency[1] == 'before'">
-                                            <td class="mon_fld">
-                                                <t t-esc="currency[0]"/>0
-                                            </td>
-                                            <td class="mon_fld">
-                                                <t t-esc="currency[0]"/>0
-                                            </td>
-                                        </t>
-                                        <t t-else="">
-                                            <td class="mon_fld">
-                                                0
-                                                <t t-esc="currency[0]"/>
-                                            </td>
-                                            <td class="mon_fld">
-                                                0
-                                                <t t-esc="currency[0]"/>
-                                            </td>
-                                        </t>
-                                    </t>
-                                </t>
-                                <t t-if="currency[1] == 'before'">
-                                    <td class="mon_fld">
-                                        <t t-esc="currency[0]"/>
-                                        <t t-raw="account['debit']"/>
-                                    </td>
-                                    <td class="mon_fld">
-                                        <t t-esc="currency[0]"/>
-                                        <t t-raw="account['credit']"/>
-                                    </td>
-
-                                </t>
-                                <t t-else="">
-                                    <td class="mon_fld">
-                                        <t t-raw="account['debit']"/>
-                                        <t t-esc="currency[0]"/>
-                                    </td>
-                                    <td class="mon_fld">
-                                        <t t-raw="account['credit']"/>
-                                        <t t-esc="currency[0]"/>
-                                    </td>
-
-                                </t>
-
-                                <t t-set="common_id" t-value="'a'+account['id']"/>
-                            </tr>
-                        </t>
-                        <td colspan="6" style="" class="">
-                            <strong>Total</strong>
-                        </td>
-                        <t t-if="filter['date_from']">
-
-                            <td class="mon_fld" style="">
-                                <strong></strong>
-                            </td>
-                            <td class="mon_fld" style="">
-                                <strong></strong>
-                            </td>
-                        </t>
-                        <t t-if="currency[1] == 'before'">
-                            <td class="mon_fld" style="">
-                                <strong>
-                                    <t t-esc="currency[0]"/>
-<!--                                    <t t-raw="Math.round(debit_total * Math.pow(10, 2)) / Math.pow(10, 2)"/>-->
-                                    <t t-esc="debit_total"/>
-                                </strong>
-                            </td>
-                            <td class="mon_fld" style="">
-                                <strong>
-                                    <t t-esc="currency[0]"/>
-<!--                                    <t t-raw="Math.round(credit_total * Math.pow(10, 2)) / Math.pow(10, 2)"/>-->
-                                    <t t-esc="credit_total"/>
-                                </strong>
-                            </td>
-                        </t>
-                        <t t-else="">
-
-                            <td class="mon_fld" style="">
-                                <strong>
-                                    <t t-raw="Math.round(debit_total * Math.pow(10, 2)) / Math.pow(10, 2)"/>
-                                    <t t-esc="currency[0]"/>
-                                </strong>
-                            </td>
-                            <td class="mon_fld" style="">
-                                <strong>
-                                    <t t-raw="Math.round(credit_total * Math.pow(10, 2)) / Math.pow(10, 2)"/>
-                                    <t t-esc="currency[0]"/>
-                                </strong>
-                            </td>
-                        </t>
-
-                    </tbody>
-
-                </table>
-            </div>
-        </div>
-    </t>
-
-
-    <t t-name="TrialFilterView">
-        <div class="row" style="margin-right: 10px; margin-left: 10px;">
-            <div class="sub_container_left" style="width:70%;">
-                <div class="report_print">
-                    <button type="button" class="btn btn-primary" id="pdf"
-                            style="position: relative;height:30px;color:white;background-color: #00A0AD;border-color: #00A0AD; padding:3px;">
-                        Print (PDF)
-                    </button>
-                    <button type="button" class="btn btn-primary" id="xlsx"
-                            style="position: relative;height:30px;color:white;background-color: #00A0AD;border-color: #00A0AD; padding:3px;">
-                        Export (XLSX)
-                    </button>
-                </div>
-            </div>
-            <br></br>
-            <div class="sub_container_right row" style="width:30%;height:3%;top:0px;position: relative;">
-
-                        <div class="time_range" style="">
-                            <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown" >
-                                <span class="fa fa-calendar" title="Dates" role="img" aria-label="Dates"></span>
-                                Date Range
-                            </a>
-                            <div class="dropdown-menu" role="menu">
-                                <div class="form-group">
-                                    <label class="" for="date_from">Start Date :</label>
-                                        <div class="input-group date" id="date_from" data-target-input="nearest">
-<!--                                            <t t-set='date_formatted'><t t-options='{"widget": "date"}' t-esc="filter_data.date_from"/></t>-->
-<!--                                            <input type="text" name="date_from" class="form-control datetimepicker-input" t-att-value="date_formatted"  data-target="#date_from" t-att-name="prefix"/>-->
-                                            <input type="text" name="date_from" class="form-control datetimepicker-input" data-target="#date_from" t-att-name="prefix"/>
-
-                                            <div class="input-group-append" data-target="#date_from" data-bs-toggle="datetimepicker">
-                                                <span class="input-group-text">
-                                                    <span class="fa fa-calendar" role="img" aria-label="Calendar"></span>
-                                                </span>
-                                            </div>
+                                            <input type="number"
+                                                   t-ref="periods"
+                                                   min="1"
+                                                   t-on-input="onPeriodChange"
+                                                   style="border:none;border-bottom: 1px solid #000;padding: 5px;outline: none;"
+                                                   name="previous_period"/>
                                         </div>
-
-                                    <label class="" for="date_to">End Date :</label>
-                                    <div class="input-group date" id="date_to" data-target-input="nearest">
-
-                                        <input type="text" name="date_to" class="form-control datetimepicker-input" data-target="#date_to" t-att-name="prefix"/>
-                                        <div class="input-group-append" data-target="#date_to" data-bs-toggle="datetimepicker">
-                                            <span class="input-group-text">
-                                                <span class="fa fa-calendar" role="img" aria-label="Calendar"></span>
-                                            </span>
+                                        <button class="btn btn-primary"
+                                                type="button"
+                                                style="margin-left: 19px;margin-top: 4px;"
+                                                t-on-click="applyComparisonPeriod">
+                                            Apply
+                                        </button>
+                                        <div role="separator"
+                                             class="dropdown-divider"/>
+                                        <label class="" for="period_year"
+                                               style="display: flex;padding: 4px 20px;color: #000;">
+                                            Same Period Last Year
+                                            <br/>
+                                            Number of Periods:
+                                        </label>
+                                        <div class="input-group comparison"
+                                             data-target-input="nearest">
+                                            <input type="number"
+                                                   t-ref="period_year"
+                                                   t-on-input="onPeriodYearChange"
+                                                   min="1"
+                                                   style="border:none;border-bottom: 1px solid #000;padding: 5px;outline: none;"
+                                                   name="period_year"/>
                                         </div>
+                                        <button class="btn btn-primary"
+                                                type="button"
+                                                style="margin-left: 19px;margin-top: 4px;"
+                                                t-on-click="applyComparisonYear">
+                                            Apply
+                                        </button>
                                     </div>
-
+                                </div>
+                            </div>
+                            <div class="journal" style="">
+                                <a type="button" class="dropdown-toggle"
+                                   data-bs-toggle="dropdown" style="display: flex;
+                                                                    text-wrap: wrap;
+                                                                    flex-direction: row;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    min-width: 105px;">
+                                    <span class="fa fa-book" title="Journals"
+                                          role="img"/>
+                                    Journals
+                                    <t t-if="state.selected_journal_list">:
+                                        <t t-foreach="state.selected_journal_list"
+                                           t-as="Journal_key"
+                                           t-key="Journal_key_index">
+                                            <t t-foreach="state.journals"
+                                               t-as="Journal"
+                                               t-key="Journal_index">
+                                                <t t-if="Journal['id'] == Journal_key">
+                                                    <t t-esc="Journal['name']"/>
+                                                </t>
+                                            </t>
+                                            <t t-if="Journal_key_index != Object.keys(state.selected_journal_list).length - 1">
+                                                ,
+                                            </t>
+                                        </t>
+                                    </t>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="list-group">
+                                        <t t-if="state.journals">
+                                            <t t-foreach="state.journals"
+                                               t-as="journal"
+                                               t-key="journal.id">
+                                                <button class="report-filter-button"
+                                                        t-att-data-value="'journal'"
+                                                        t-att-data-id="journal.id"
+                                                        type="button"
+                                                        t-on-click="applyFilter">
+                                                    <t t-esc="journal.name"/>
+                                                </button>
+                                            </t>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Options Dropdown -->
+                            <div class="option" style="">
+                                <a type="button" class="dropdown-toggle"
+                                   data-bs-toggle="dropdown">
+                                    <span class="fa fa-glass" title="Accounts"
+                                          role="img"
+                                          aria-label="Dates"/>
+                                    Options : Posted Entries ,
+                                    <t t-esc="Object.keys(state.method)[(Object.keys(state.method).length)-1]"/>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="list-group">
+                                        <!-- Include Draft Entries Button -->
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'draft'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            Include Draft Entries
+                                        </button>
+                                        <button class="report-filter-button"
+                                                t-att-data-value="'cash-basis'"
+                                                type="button"
+                                                t-on-click="applyFilter">
+                                            Cash basis method
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="journals_filter" style="">
-                            <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                                <span class="fa fa-book"></span>
-                                Journals:
-                            </a>
-                            <select class="dropdown-menu  journals" name="states[]" multiple="multiple">
-                                <div role="separator" class="dropdown-divider"></div>
-                                <t t-foreach="filter_data.journals_list" t-as="journal">
-
-                                     <t t-if="journal[0]=='divider'">
-                                            <div role="separator" class="dropdown-divider"/>
-
-                                         <option disabled="disabled" role="menuitem" t-attf-value="{{journal[0]}}">
-                                            <t t-esc="journal[1]"/>
-                                        </option>
-                                            <div role="separator" class="dropdown-divider"/>
-                                     </t>
-
-
-                                    <t t-else="">
-                                        <option t-attf-value="{{journal[0]}}">
-                                            <t t-esc="journal[1]"/>
-                                        </option>
+                    </div>
+                </div>
+            </div>
+            <div class="table_style">
+                <!-- Table View -->
+                <div class="table_view_gl" style="right:20px;width:100%;"
+                     t-ref="table_view_gl">
+                    <div>
+                        <div class="table_main_view">
+                            <table cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class="o_heading"
+                                        style="text-align:center;">
+                                        <th colspan="6"/>
+                                        <th colspan="2">Initial Balance</th>
+                                        <t t-if="state.date_viewed.length != 0">
+                                            <t t-foreach="state.date_viewed"
+                                               t-as="date_view"
+                                               t-key="date_view_index">
+                                                <th colspan="2">
+                                                    <t t-esc="date_view"/>
+                                                </th>
+                                            </t>
+                                        </t>
+                                        <th colspan="2">End Balance</th>
+                                    </tr>
+                                    <tr class="o_heading"
+                                        style="text-align:center;">
+                                        <th colspan="6"/>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                        <t t-if="state.apply_comparison == true">
+                                            <t t-set="number_of_periods"
+                                               t-value="comparison_number_range"/>
+                                            <t t-foreach="number_of_periods"
+                                               t-as="number" t-key="number">
+                                                <th>Debit</th>
+                                                <th>Credit</th>
+                                            </t>
+                                        </t>
+                                    </tr>
+                                </thead>
+                                <tbody t-ref="tbody">
+                                    <t t-if="state.data">
+                                        <t t-set="i" t-value="0"/>
+                                        <t t-foreach="state.data"
+                                           t-as="move_line"
+                                           t-key="move_line_index">
+                                            <t t-set="i" t-value="i + 1"/>
+                                            <tr class="border-bottom"
+                                                style="border-spacing: 0 10px;">
+                                                <th colspan="6">
+                                                    <span class="dropdown">
+                                                        <a class="dropdown-toggle"
+                                                           data-bs-toggle="dropdown"
+                                                           style="color: black;">
+                                                            <span>
+                                                                <t t-esc="move_line['account']"/>
+                                                            </span>
+                                                        </a>
+                                                        <span class="dropdown-menu">
+                                                            <a role="menuitem"
+                                                               t-on-click="show_gl"
+                                                               class="show_gl">
+                                                                General Ledger
+                                                            </a>
+                                                            <div role="separator"
+                                                                 class="dropdown-divider"/>
+                                                            <a role="menuitem"
+                                                               t-att-data-id="move_line['account_id']"
+                                                               t-on-click="gotoJournalItem"
+                                                               class="show_gl">
+                                                                Journal Items
+                                                            </a>
+                                                        </span>
+                                                    </span>
+                                                </th>
+                                                <th style="text-align:center;">
+                                                    <t t-if="move_line['initial_total_debit']"
+                                                       t-esc="move_line['initial_total_debit']"/>
+                                                </th>
+                                                <th style="text-align:center;">
+                                                    <t t-if="move_line['initial_total_credit']"
+                                                       t-esc="move_line['initial_total_credit']"/>
+                                                </th>
+                                                <t t-if="state.apply_comparison == true">
+                                                    <t t-set="number_of_periods"
+                                                       t-value="comparison_number_range"/>
+                                                    <t t-foreach="number_of_periods"
+                                                       t-as="num" t-key="num">
+                                                        <th style="text-align:center;">
+                                                            <t t-if="move_line['dynamic_total_debit_' + num]"
+                                                               t-esc="move_line['dynamic_total_debit_' + num]"/>
+                                                        </th>
+                                                        <th style="text-align:center;">
+                                                            <t t-if="move_line['dynamic_total_credit_' + num]"
+                                                               t-esc="move_line['dynamic_total_credit_' + num]"/>
+                                                        </th>
+                                                    </t>
+                                                </t>
+                                                <th style="text-align:center;">
+                                                    <t t-if="move_line['total_debit']"
+                                                       t-esc="move_line['total_debit'].toFixed(2)"/>
+                                                </th>
+                                                <th style="text-align:center;">
+                                                    <t t-if="move_line['total_credit']"
+                                                       t-esc="move_line['total_credit'].toFixed(2)"/>
+                                                </th>
+                                                <th style="text-align:center;">
+                                                    <t t-if="move_line['end_total_debit']"
+                                                       t-esc="move_line['end_total_debit'].toFixed(2)"/>
+                                                </th>
+                                                <th style="text-align:center;">
+                                                    <t t-if="move_line['end_total_credit']"
+                                                       t-esc="move_line['end_total_credit'].toFixed(2)"/>
+                                                </th>
+                                            </tr>
+                                        </t>
+                                        <tr class="border-bottom"
+                                            style="border-spacing: 0 10px;color:#000">
+                                            <th colspan="6">Total</th>
+                                            <th style="text-align:center;">
+                                                <t t-esc="sumByKey(state.data, 'initial_total_debit').toFixed(2)"/>
+                                            </th>
+                                            <th style="text-align:center;">
+                                                <t t-esc="sumByKey(state.data, 'initial_total_credit').toFixed(2)"/>
+                                            </th>
+                                            <t t-if="state.apply_comparison == true">
+                                                <t t-set="number_of_periods"
+                                                   t-value="comparison_number_range"/>
+                                                <t t-foreach="number_of_periods"
+                                                   t-as="nb" t-key="nb">
+                                                    <th style="text-align:center;">
+                                                        <t t-esc="sumByKey(state.data, 'dynamic_total_debit_' + nb).toFixed(2)"/>
+                                                    </th>
+                                                    <th style="text-align:center;">
+                                                        <t t-esc="sumByKey(state.data, 'dynamic_total_credit_' + nb).toFixed(2)"/>
+                                                    </th>
+                                                </t>
+                                            </t>
+                                            <th style="text-align:center;">
+                                                <t t-esc="sumByKey(state.data, 'total_debit').toFixed(2)"/>
+                                            </th>
+                                            <th style="text-align:center;">
+                                                <t t-esc="sumByKey(state.data, 'total_credit').toFixed(2)"/>
+                                            </th>
+                                            <th style="text-align:center;">
+                                                <t t-esc="sumByKey(state.data, 'end_total_debit').toFixed(2)"/>
+                                            </th>
+                                            <th style="text-align:center;">
+                                                <t t-esc="sumByKey(state.data, 'end_total_credit').toFixed(2)"/>
+                                            </th>
+                                        </tr>
                                     </t>
-
-                                </t>
-                            </select>
-                            <span id="journal_res"></span>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <div class="search-Target-move" style="">
-                            <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                                <span class="fa fa-filter"></span>
-                                Target Move:
-                            </a>
-                            <select id="entries" class="dropdown-menu target_move" name="states[]">
-                                <div role="separator" class="dropdown-divider"></div>
-                                <option value="Posted">Posted Entries</option>
-                                <option value="All">All Entries</option>
-                            </select>
-                            <span id="post_res"></span>
-                        </div>
-                        <div style="">
-                            <button type="button" id="apply_filter" class="btn btn-primary"
-                                    style="top:0px;height:30px;color:white;background-color: #00A0AD;border-color: #00A0AD;">
-                                Apply
-                            </button>
-
-                        </div>
-<!--                    </div>-->
-
-
-<!--                </div>-->
-
+                    </div>
+                </div>
             </div>
         </div>
     </t>
-
 </templates>

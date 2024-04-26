@@ -1,336 +1,526 @@
-odoo.define('dynamic_accounts_report.trial_balance', function(require) {
-	'use strict';
-	var AbstractAction = require('web.AbstractAction');
-	var core = require('web.core');
-	var field_utils = require('web.field_utils');
-	var rpc = require('web.rpc');
-	var session = require('web.session');
-	var utils = require('web.utils');
+/** @odoo-module */
+const { Component } = owl;
+import { registry } from "@web/core/registry";
+import { useService } from "@web/core/utils/hooks";
+import { useRef, useState } from "@odoo/owl";
+import { BlockUI } from "@web/core/ui/block_ui";
+import { download } from "@web/core/network/download";
+const actionRegistry = registry.category("actions");
+const today = luxon.DateTime.now();
+let monthNamesShort = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
-	var QWeb = core.qweb;
-	var _t = core._t;
-	var framework = require('web.framework');
-
-
-	var datepicker = require('web.datepicker');
-	var time = require('web.time');
-
-	//    import framework from 'web.framework';
-	//    import { download } from "@web/core/network/download";
-
-
-	//    import { registry } from "@web/core/registry";
-	//    const serviceRegistry = registry.category("services");
-
-	window.click_num = 0;
-	var TrialBalance = AbstractAction.extend({
-		template: 'TrialTemp',
-		events: {
-			'click .parent-line': 'journal_line_click',
-			'click .child_col1': 'journal_line_click',
-			'click #apply_filter': 'apply_filter',
-			'click #pdf': 'print_pdf',
-			'click #xlsx': 'print_xlsx',
-			'click .show-gl': 'show_gl',
-			'mousedown div.input-group.date[data-target-input="nearest"]': '_onCalendarIconClick',
-		},
-
-		init: function(parent, action) {
-			this._super(parent, action);
-			this.currency = action.currency;
-			this.report_lines = action.report_lines;
-			this.wizard_id = action.context.wizard | null;
-		},
-
-
-		start: function() {
-			var self = this;
-			self.initial_render = true;
-			rpc.query({
-				model: 'account.trial.balance',
-				method: 'create',
-				args: [{
-
-				}]
-			}).then(function(t_res) {
-				self.wizard_id = t_res;
-				self.load_data(self.initial_render);
-			})
-		},
-
-
-		load_data: function(initial_render = true) {
-			var self = this;
-			self.$(".categ").empty();
-			try {
-				var self = this;
-				self._rpc({
-					model: 'account.trial.balance',
-					method: 'view_report',
-					args: [
-						[this.wizard_id]
-					],
-				}).then(function(datas) {
-
-
-
-					_.each(datas['report_lines'], function(rep_lines) {
-						rep_lines.debit = self.format_currency(datas['currency'], rep_lines.debit);
-						rep_lines.credit = self.format_currency(datas['currency'], rep_lines.credit);
-						rep_lines.balance = self.format_currency(datas['currency'], rep_lines.balance);
-
-
-
-					});
-					if (initial_render) {
-						self.$('.filter_view_tb').html(QWeb.render('TrialFilterView', {
-							filter_data: datas['filters'],
-						}));
-						self.$el.find('.journals').select2({
-							placeholder: 'Select Journals...',
-						});
-						self.$el.find('.target_move').select2({
-							placeholder: 'Target Move...',
-						});
-						//                                    self.$el.find('#start_dateee').select2({
-						//                                        placeholder: 'Date.',
-						//                                    });
-					}
-					var child = [];
-
-					self.$('.table_view_tb').html(QWeb.render('TrialTable', {
-
-						report_lines: datas['report_lines'],
-						filter: datas['filters'],
-						currency: datas['currency'],
-						credit_total: self.format_currency(datas['currency'], datas['debit_total']),
-						debit_total: self.format_currency(datas['currency'], datas['debit_total']),
-					}));
-
-				});
-
-			} catch (el) {
-				window.location.href
-			}
-		},
-
-		show_gl: function(e) {
-			var self = this;
-			var account_id = $(e.target).attr('data-account-id');
-			var options = {
-				account_ids: [account_id],
-			}
-
-			var action = {
-				type: 'ir.actions.client',
-				name: 'GL View',
-				tag: 'g_l',
-				target: 'new',
-
-				domain: [
-					['account_ids', '=', account_id]
-				],
-
-
-			}
-			return this.do_action(action);
-
-		},
-
-		print_pdf: function(e) {
-			e.preventDefault();
-			var self = this;
-			self._rpc({
-				model: 'account.trial.balance',
-				method: 'view_report',
-				args: [
-					[self.wizard_id]
-				],
-			}).then(function(data) {
-				var action = {
-					'type': 'ir.actions.report',
-					'report_type': 'qweb-pdf',
-					'report_name': 'dynamic_accounts_report.trial_balance',
-					'report_file': 'dynamic_accounts_report.trial_balance',
-					'data': {
-						'report_data': data
-					},
-					'context': {
-						'active_model': 'account.trial.balance',
-						'landscape': 1,
-						'trial_pdf_report': true
-					},
-					'display_name': 'Trial Balance',
-				};
-				return self.do_action(action);
-			});
-		},
-
-		_onCalendarIconClick: function(ev) {
-			var $calendarInputGroup = $(ev.currentTarget);
-
-			var calendarOptions = {
-
-				//        minDate: moment({ y: 1000 }),
-				//            maxDate: moment().add(200, 'y'),
-				//            calendarWeeks: true,
-				//            defaultDate: moment().format(),
-				//            sideBySide: true,
-				//            buttons: {
-				//                showClear: true,
-				//                showClose: true,
-				//                showToday: true,
-				//            },
-
-				icons: {
-					date: 'fa fa-calendar',
-
-				},
-				locale: moment.locale(),
-				format: time.getLangDateFormat(),
-				widgetParent: 'body',
-				allowInputToggle: true,
-			};
-
-			$calendarInputGroup.datetimepicker(calendarOptions);
-		},
-
-
-
-		format_currency: function(currency, amount) {
-			if (typeof(amount) != 'number') {
-				amount = parseFloat(amount);
-			}
-			var formatted_value = (parseInt(amount)).toLocaleString(currency[2], {
-				minimumFractionDigits: 2
-			})
-			return formatted_value
-		},
-
-		print_xlsx: function() {
-			var self = this;
-			self._rpc({
-				model: 'account.trial.balance',
-				method: 'view_report',
-				args: [
-					[self.wizard_id]
-				],
-			}).then(function(data) {
-				var action = {
-					//                    'type': 'ir_actions_dynamic_xlsx_download',
-					'data': {
-						'model': 'account.trial.balance',
-						'options': JSON.stringify(data['filters']),
-						'output_format': 'xlsx',
-						'report_data': JSON.stringify(data['report_lines']),
-						'report_name': 'Trial Balance',
-						'dfr_data': JSON.stringify(data),
-					},
-				};
-
-				//                return self.do_action(action);
-				self.downloadXlsx(action);
-			});
-		},
-
-		downloadXlsx: function(action) {
-			framework.blockUI();
-			session.get_file({
-				url: '/dynamic_xlsx_reports',
-				data: action.data,
-				complete: framework.unblockUI,
-				error: (error) => this.call('crash_manager', 'rpc_error', error),
-			});
-		},
-
-		journal_line_click: function(el) {
-			click_num++;
-			var self = this;
-			var line = $(el.target).parent().data('id');
-			return self.do_action({
-				type: 'ir.actions.act_window',
-				view_type: 'form',
-				view_mode: 'form',
-				res_model: 'account.move',
-				views: [
-					[false, 'form']
-				],
-				res_id: line,
-				target: 'current',
-			});
-
-		},
-
-
-		apply_filter: function(event) {
-			event.preventDefault();
-			var self = this;
-			self.initial_render = false;
-			var filter_data_selected = {};
-			var journal_ids = [];
-			var journal_text = [];
-			var journal_res = document.getElementById("journal_res")
-			var journal_list = $(".journals").select2('data')
-
-			for (var i = 0; i < journal_list.length; i++) {
-				if (journal_list[i].element[0].selected === true) {
-
-					journal_ids.push(parseInt(journal_list[i].id))
-					if (journal_text.includes(journal_list[i].text) === false) {
-						journal_text.push(journal_list[i].text)
-					}
-					journal_res.value = journal_text
-					journal_res.innerHTML = journal_res.value;
-				}
-			}
-			if (journal_list.length == 0) {
-				journal_res.value = ""
-				journal_res.innerHTML = "";
-
-			}
-			filter_data_selected.journal_ids = journal_ids
-
-			if (this.$el.find('.datetimepicker-input[name="date_from"]').val()) {
-				filter_data_selected.date_from = moment(this.$el.find('.datetimepicker-input[name="date_from"]').val(), time.getLangDateFormat()).locale('en').format('YYYY-MM-DD');
-			}
-
-			if (this.$el.find('.datetimepicker-input[name="date_to"]').val()) {
-				filter_data_selected.date_to = moment(this.$el.find('.datetimepicker-input[name="date_to"]').val(), time.getLangDateFormat()).locale('en').format('YYYY-MM-DD');
-			}
-			//            if ($("#date_from").val()) {
-			//                var dateString = $("#date_from").val();
-			//                filter_data_selected.date_from = dateString;
-			//            }
-
-
-			//            if ($("#date_to").val()) {
-			//                var dateString = $("#date_to").val();
-			//                filter_data_selected.date_to = dateString;
-			//            }
-
-			if ($(".target_move").length) {
-				var post_res = document.getElementById("post_res")
-				filter_data_selected.target_move = $(".target_move")[1].value
-				post_res.value = $(".target_move")[1].value
-				post_res.innerHTML = post_res.value;
-				if ($(".target_move")[1].value == "") {
-					post_res.innerHTML = "posted";
-
-				}
-			}
-			rpc.query({
-				model: 'account.trial.balance',
-				method: 'write',
-				args: [
-					self.wizard_id, filter_data_selected
-				],
-			}).then(function(res) {
-				self.initial_render = false;
-				self.load_data(self.initial_render);
-			});
-		},
-
-	});
-	core.action_registry.add("t_b", TrialBalance);
-	return TrialBalance;
-});
+class TrialBalance extends owl.Component {
+    async setup() {
+        super.setup(...arguments);
+        this.initial_render = true;
+        this.orm = useService('orm');
+        this.action = useService('action');
+        this.tbody = useRef('tbody');
+        this.end_date = useRef('date_to');
+        this.start_date = useRef('date_from');
+        this.period = useRef('periods');
+        this.period_year = useRef('period_year');
+        this.unfoldButton = useRef('unfoldButton');
+        this.state = useState({
+            move_line: null,
+            data: null,
+            total: null,
+            journals: null,
+            selected_analytic: [],
+            analytic_account: null,
+            selected_journal_list: [],
+            selected_analytic_account_rec: [],
+            date_range: 'month',
+            date_type: 'month',
+            apply_comparison: false,
+            comparison_type: null,
+            date_viewed: [],
+            comparison_number: null,
+            options: null,
+            method: {
+                        'accural': true
+                    },
+        });
+        this.load_data(self.initial_render = true);
+    }
+    async load_data() {
+        /**
+         * Loads the data for the trial balance report.
+         */
+        let move_line_list = []
+        let move_lines_total = ''
+        var self = this;
+        var action_title = self.props.action.display_name;
+        try {
+            var self = this;
+            var today = new Date();
+            var startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+            var endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+            self.state.data = await self.orm.call("account.trial.balance", "view_report", []);
+            self.start_date.el.value = startOfMonth.getFullYear() + '-' + String(startOfMonth.getMonth() + 1).padStart(2, '0') + '-' + String(startOfMonth.getDate()).padStart(2, '0');
+            self.end_date.el.value = endOfMonth.getFullYear() + '-' + String(endOfMonth.getMonth() + 1).padStart(2, '0') + '-' + String(endOfMonth.getDate()).padStart(2, '0');
+            self.state.date_viewed.push(monthNamesShort[today.getMonth()] + '  ' + today.getFullYear())
+            $.each(self.state.data, function (index, value) {
+                self.state.journals = value.journal_ids
+            })
+        }
+        catch (el) {
+            window.location.href;
+        }
+    }
+    async applyFilter(val, ev, is_delete) {
+        /**
+         * Asynchronously applies filters and loads data for the trial balance report.
+         * Modifies state variables based on the selected filter options.
+         * Updates 'move_line_list' and 'move_lines_total'.
+         * Sets the start and end date inputs based on selected filter options.
+         * Appends the selected date ranges to 'state.date_viewed'.
+         * Updates 'state.journals' based on the selected journal filter.
+         * Retrieves data using the 'account.trial.balance' API with the selected filter values.
+         * Updates 'state.data' with the retrieved data.
+         * Handles the comparison logic and updates 'state.date_viewed' accordingly.
+         * Reverses the order of 'state.date_viewed' if data exists.
+         *
+         * @param {any} val - The selected filter value or event.
+         * @param {Event} ev - The event object triggered by the filter.
+         * @param {boolean} is_delete - Flag indicating if the filter is being deleted.
+         * @returns {Promise<void>} Resolves when the filter is applied and data is loaded.
+         */
+        if (ev && ev.target && ev.target.attributes["data-value"] && ev.target.attributes["data-value"].value == 'no comparison') {
+            const lastIndex = this.state.date_viewed.length - 1;
+            this.state.date_viewed.splice(0, lastIndex);
+        }
+        if (ev) {
+            if (ev.input && ev.input.attributes.placeholder.value == 'Account' && !is_delete) {
+                this.state.selected_analytic.push(val[0].id)
+                this.state.selected_analytic_account_rec.push(val[0])
+            } else if (is_delete) {
+                let index = this.state.selected_analytic_account_rec.indexOf(val)
+                this.state.selected_analytic_account_rec.splice(index, 1)
+                this.state.selected_analytic = this.state.selected_analytic_account_rec.map((rec) => rec.id)
+            }
+        }
+        else {
+            if (val && val.target.name === 'start_date') {
+                this.state.date_viewed = []
+                this.state.date_viewed.push('From' + ' ' + this.formatDate(this.start_date.el.value) + ' ' + 'To' + ' ' + this.formatDate(this.end_date.el.value))
+                this.state.date_range = {
+                    ...this.state.date_range,
+                    start_date: val.target.value
+                };
+            } else if (val && val.target.name === 'end_date') {
+                this.state.date_viewed = []
+                this.state.date_viewed.push('From' + ' ' + this.formatDate(this.start_date.el.value) + 'To' + ' ' + this.formatDate(this.end_date.el.value))
+                this.state.date_range = {
+                    ...this.state.date_range,
+                    end_date: val.target.value
+                };
+            } else if (val && val.target.attributes["data-value"].value == 'month') {
+                this.start_date.el.value = today.startOf('month').toFormat('yyyy-MM-dd')
+                this.end_date.el.value = today.endOf('month').toFormat('yyyy-MM-dd')
+                this.state.date_viewed = []
+                this.state.date_viewed.push(today.monthShort + ' ' + today.c.year)
+                this.state.date_type = val.target.attributes["data-value"].value
+                this.state.comparison_type = this.state.date_type
+                this.state.date_range = {
+                    start_date: this.start_date.el.value,
+                    end_date: this.end_date.el.value
+                };
+            } else if (val && val.target.attributes["data-value"].value == 'year') {
+                this.start_date.el.value = today.startOf('year').toFormat('yyyy-MM-dd')
+                this.end_date.el.value = today.endOf('year').toFormat('yyyy-MM-dd')
+                this.state.date_viewed = []
+                this.state.date_viewed.push(today.c.year)
+                this.state.date_type = val.target.attributes["data-value"].value
+                this.state.comparison_type = this.state.date_type
+                this.state.date_range = {
+                    start_date: this.start_date.el.value,
+                    end_date: this.end_date.el.value
+                };
+            } else if (val && val.target.attributes["data-value"].value == 'quarter') {
+                this.start_date.el.value = today.startOf('quarter').toFormat('yyyy-MM-dd')
+                this.end_date.el.value = today.endOf('quarter').toFormat('yyyy-MM-dd')
+                this.state.date_viewed = []
+                this.state.date_viewed.push('Q' + ' ' + today.quarter)
+                this.state.comparison_type = this.state.date_type
+                this.state.date_type = val.target.attributes["data-value"].value
+                this.state.date_range = {
+                    start_date: this.start_date.el.value,
+                    end_date: this.end_date.el.value
+                };
+            } else if (val && val.target.attributes["data-value"].value == 'last-month') {
+                this.start_date.el.value = today.startOf('month').minus({ days: 1 }).startOf('month').toFormat('yyyy-MM-dd')
+                this.end_date.el.value = today.startOf('month').minus({ days: 1 }).toFormat('yyyy-MM-dd')
+                this.state.date_viewed = []
+                this.state.date_viewed.push(today.startOf('month').minus({ days: 1 }).monthShort + ' ' + today.startOf('month').minus({ days: 1 }).c.year)
+                this.state.date_type = 'month'
+                this.state.comparison_type = this.state.date_type
+                this.state.date_range = {
+                    start_date: this.start_date.el.value,
+                    end_date: this.end_date.el.value
+                };
+            } else if (val && val.target.attributes["data-value"].value == 'last-year') {
+                this.start_date.el.value = today.startOf('year').minus({ days: 1 }).startOf('year').toFormat('yyyy-MM-dd')
+                this.end_date.el.value = today.startOf('year').minus({ days: 1 }).toFormat('yyyy-MM-dd')
+                this.state.date_viewed = []
+                this.state.date_viewed.push(today.startOf('year').minus({ days: 1 }).c.year)
+                this.state.date_type = 'year'
+                this.state.comparison_type = this.state.date_type
+                this.state.date_range = {
+                    start_date: this.start_date.el.value,
+                    end_date: this.end_date.el.value
+                };
+            } else if (val && val.target.attributes["data-value"].value == 'last-quarter') {
+                this.start_date.el.value = today.startOf('quarter').minus({ days: 1 }).startOf('quarter').toFormat('yyyy-MM-dd')
+                this.end_date.el.value = today.startOf('quarter').minus({ days: 1 }).toFormat('yyyy-MM-dd')
+                this.state.date_viewed = []
+                this.state.date_viewed.push('Q' + ' ' + today.startOf('quarter').minus({ days: 1 }).quarter)
+                this.state.date_type = 'quarter'
+                this.state.comparison_type = this.state.date_type
+                this.state.date_range = {
+                    start_date: this.start_date.el.value,
+                    end_date: this.end_date.el.value
+                };
+            } else if (val && val.target.attributes["data-value"].value == 'journal') {
+                if (!val.target.classList.contains("selected-filter")) {
+                    this.state.selected_journal_list.push(parseInt(val.target.attributes["data-id"].value, 10))
+                    val.target.classList.add("selected-filter");
+                } else {
+                    const updatedList = this.state.selected_journal_list.filter(item => item !== parseInt(val.target.attributes["data-id"].value, 10));
+                    this.state.selected_journal_list = updatedList
+                    val.target.classList.remove("selected-filter");
+                }
+            } else if (val && val.target.attributes["data-value"].value === 'draft') {
+                if (val.target.classList.contains("selected-filter")) {
+                    const { draft, ...updatedAccount } = this.state.options;
+                    this.state.options = updatedAccount;
+                    val.target.classList.remove("selected-filter");
+                } else {
+                    this.state.options = {
+                        ...this.state.options,
+                        'draft': true
+                    };
+                    val.target.classList.add("selected-filter");
+                }
+            }else if (val.target.attributes["data-value"].value === 'cash-basis') {
+                if (val.target.classList.contains("selected-filter")) {
+                    const { cash, ...updatedAccount } = this.state.method;
+                    this.state.method = updatedAccount;
+                    val.target.classList.remove("selected-filter");
+                } else {
+                    this.state.method = {
+                        ...this.state.method,
+                        'cash': true
+                    };
+                    val.target.classList.add("selected-filter");
+                }
+            }
+        }
+        if (this.state.apply_comparison == true) {
+            if (this.state.comparison_type == 'year') {
+                this.state.date_viewed = []
+                if (this.start_date.el.value) {
+                    var current_year = new Date(this.start_date.el.value).getFullYear();
+                    var month = new Date(this.start_date.el.value).getMonth();
+                } else {
+                    var current_year = new Date(today).getFullYear();
+                    var month = new Date(today).getMonth()
+                }
+                this.state.comparison_number = this.period_year.el.value
+                for (var i = this.state.comparison_number; i >= 0; i--) {
+                    var date = monthNamesShort[month] + ' ' + (current_year - i);
+                    this.state.date_viewed.push(date);
+                }
+            } else if (this.state.comparison_type == 'month') {
+                this.state.date_viewed = []
+                this.state.comparison_number = this.period.el.value
+            } else if (this.state.comparison_type == 'quarter') {
+                this.state.date_viewed = []
+                this.state.comparison_number = this.period.el.value
+            }
+        }
+        this.state.data = await this.orm.call("account.trial.balance", "get_filter_values", [this.start_date.el.value, this.end_date.el.value, this.state.comparison_number, this.state.comparison_type, this.state.selected_journal_list, this.state.selected_analytic, this.state.options,this.state.method,]);
+        var date_viewed = []
+        $.each(this.state.data, function (index, value) {
+            if (index == 'journal_ids') {
+                this.state.journals = value
+            }
+            if (value.dynamic_date_num) {
+                $.each(value.dynamic_date_num, function (index, value) {
+                    if (!date_viewed.includes(value)) {
+                        date_viewed.push(value)
+                    }
+                })
+            }
+        })
+        if (date_viewed.length !== 0) {
+            this.state.date_viewed = date_viewed.reverse()
+        }
+    }
+    onPeriodChange(ev) {
+        /**
+         * Event handler for period change.
+         * Updates the value of 'period_year' element based on the event target value.
+         *
+         * @param {Event} ev - Event object triggered by the period change.
+         * @returns {void} No explicit return value.
+         */
+        this.period_year.el.value = ev.target.value
+    }
+    onPeriodYearChange(ev) {
+        /**
+         * Event handler for period year change.
+         * Updates the value of 'period' element based on the event target value.
+         *
+         * @param {Event} ev - Event object triggered by the period year change.
+         * @returns {void} No explicit return value.
+         */
+        this.period.el.value = ev.target.value
+    }
+    applyComparisonPeriod(ev) {
+        /**
+         * Applies a comparison period and triggers data filtering.
+         * Sets 'apply_comparison' flag to true and updates 'comparison_type'.
+         * Invokes 'applyFilter' method to apply filters and load data.
+         *
+         * @param {Event} ev - Event object triggering the comparison period application.
+         * @returns {void} No explicit return value.
+         */
+        this.state.apply_comparison = true
+        this.state.comparison_type = this.state.date_type
+        this.applyFilter(null, ev)
+    }
+    applyComparisonYear(ev) {
+        /**
+         * Applies a comparison year and triggers data filtering.
+         * Sets 'apply_comparison' flag to true and updates 'comparison_type' to 'year'.
+         * Invokes 'applyFilter' method to apply filters and load data.
+         *
+         * @param {Event} ev - Event object triggering the comparison year application.
+         * @returns {void} No explicit return value.
+         */
+        this.state.apply_comparison = true
+        this.state.comparison_type = 'year'
+        this.applyFilter(null, ev)
+    }
+    sumByKey(data, key) {
+        /**
+         * Calculates the sum of values in an array of objects by a specified key.
+         *
+         * @param {Array} data - Array of objects containing numeric values.
+         * @param {string} key - The key to access the numeric value in each object.
+         * @returns {number} The sum of the numeric values.
+         */
+        return data.reduce((acc, item) => acc + (item[key] || 0), 0);
+    }
+    get comparison_number_range() {
+        /**
+         * Generates an array of numbers representing a comparison number range.
+         * The range includes numbers from 1 up to the 'comparison_number' value in the state.
+         *
+         * @returns {Array} An array of numbers representing the comparison number range.
+         */
+        const range = [];
+        for (let i = 1; i <= this.state.comparison_number; i++) {
+            range.push(i);
+        }
+        return range;
+    }
+    async applyComparison(ev) {
+        /**
+         * Disables comparison mode, resets comparison settings, and triggers data filtering.
+         * Sets 'apply_comparison' flag to false and clears 'comparison_type' and 'comparison_number'.
+         * Removes all date view entries except the current month/year.
+         * Invokes 'applyFilter' method to apply filters and load data.
+         *
+         * @param {Event} ev - Event object triggering the comparison mode removal.
+         * @returns {void} No explicit return value.
+         */
+        this.state.apply_comparison = false
+        this.state.comparison_type = null
+        this.state.comparison_number = null
+        const lastIndex = this.state.date_viewed.length - 1;
+        this.state.date_viewed.splice(0, lastIndex);
+        this.applyFilter(null, ev)
+    }
+    getDomain() {
+        return [];
+    }
+    async printPdf(ev) {
+        /**
+         * Asynchronously generates and prints a PDF report.
+         * Triggers an action to generate a PDF report based on the current state and settings.
+         *
+         * @param {Event} ev - Event object triggering the PDF report generation.
+         * @returns {Promise} A promise that resolves after the PDF report action is triggered.
+         */
+        ev.preventDefault();
+        var self = this;
+        var action_title = self.props.action.display_name;
+        let comparison_number_range = self.comparison_number_range
+        let data_viewed = self.state.date_viewed
+        if (self.state.apply_comparison) {
+             if (self.comparison_number_range.length > 10) {
+                comparison_number_range = self.comparison_number_range.slice(-10);
+                data_viewed = self.state.date_viewed.slice(-11);
+             }
+         }
+        return self.action.doAction({
+            'type': 'ir.actions.report',
+            'report_type': 'qweb-pdf',
+            'report_name': 'dynamic_accounts_report.trial_balance',
+            'report_file': 'dynamic_accounts_report.trial_balance',
+            'data': {
+                'data': self.state.data,
+                'date_viewed': data_viewed,
+                'filters': this.filter(),
+                'apply_comparison': self.state.apply_comparison,
+                'comparison_number_range': comparison_number_range,
+                'title': action_title,
+                'report_name': self.props.action.display_name
+            },
+            'display_name': self.props.action.display_name,
+        });
+    }
+    filter() {
+    var self=this;
+    let startDate, endDate;
+    let startYear, startMonth, startDay, endYear, endMonth, endDay;
+        if (self.state.date_range){
+            const today = new Date();
+            if (self.state.date_range === 'year') {
+                startDate = new Date(today.getFullYear(), 0, 1);
+                endDate = new Date(today.getFullYear(), 11, 31);
+            } else if (self.state.date_range === 'quarter') {
+                const currentQuarter = Math.floor(today.getMonth() / 3);
+                startDate = new Date(today.getFullYear(), currentQuarter * 3, 1);
+                endDate = new Date(today.getFullYear(), (currentQuarter + 1) * 3, 0);
+            } else if (self.state.date_range === 'month') {
+                startDate = new Date(today.getFullYear(), today.getMonth(), 1);
+                endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+            } else if (self.state.date_range === 'last-month') {
+                startDate = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+                endDate = new Date(today.getFullYear(), today.getMonth(), 0);
+            } else if (self.state.date_range === 'last-year') {
+                startDate = new Date(today.getFullYear() - 1, 0, 1);
+                endDate = new Date(today.getFullYear() - 1, 11, 31);
+            } else if (self.state.date_range === 'last-quarter') {
+                const lastQuarter = Math.floor((today.getMonth() - 3) / 3);
+                startDate = new Date(today.getFullYear(), lastQuarter * 3, 1);
+                endDate = new Date(today.getFullYear(), (lastQuarter + 1) * 3, 0);
+            }
+        // Get the date components for start and end dates
+        if (startDate) {
+        startYear = startDate.getFullYear();
+        startMonth = startDate.getMonth() + 1;
+        startDay = startDate.getDate();
+        }
+        if (endDate) {
+        endYear = endDate.getFullYear();
+        endMonth = endDate.getMonth() + 1;
+        endDay = endDate.getDate();
+        }
+        }
+        const selectedJournalIDs = Object.values(self.state.selected_journal_list);
+        const selectedJournalNames = selectedJournalIDs.map((journalID) => {
+          const journal = self.state.journals[journalID];
+          return journal ? journal.name : ''; // Return the name if journal exists, otherwise an empty string
+        });
+        let filters = {
+            'journal': selectedJournalNames,
+            'account': self.state.selected_analytic_account_rec,
+            'options': self.state.options,
+            'comparison_type': self.state.comparison_type,
+            'comparison_number_range': self.state.comparison_number,
+            'start_date': null,
+            'end_date': null,
+        };
+        // Check if start and end dates are available before adding them to the filters object
+        if (startYear !== undefined && startMonth !== undefined && startDay !== undefined &&
+            endYear !== undefined && endMonth !== undefined && endDay !== undefined) {
+            filters['start_date'] = `${startYear}-${startMonth < 10 ? '0' : ''}${startMonth}-${startDay < 10 ? '0' : ''}${startDay}`;
+            filters['end_date'] = `${endYear}-${endMonth < 10 ? '0' : ''}${endMonth}-${endDay < 10 ? '0' : ''}${endDay}`;
+        }
+        return filters
+    }
+    async print_xlsx() {
+        /**
+         * Asynchronously generates and downloads an XLSX report.
+         * Triggers an action to generate an XLSX report based on the current state and settings,
+         * and initiates the download of the generated XLSX file.
+         *
+         * @returns {void} No explicit return value.
+         */
+        var self = this;
+        var action_title = self.props.action.display_name;
+        var datas = {
+            'data': self.state.data,
+            'date_viewed': self.state.date_viewed,
+            'filters': this.filter(),
+            'apply_comparison': self.state.apply_comparison,
+            'comparison_number_range': self.comparison_number_range,
+            'title': action_title,
+            'report_name': self.props.action.display_name
+        }
+        var action = {
+            'data': {
+                'model': 'account.trial.balance',
+                'data': JSON.stringify(datas),
+                'output_format': 'xlsx',
+                'report_name': action_title,
+            },
+        };
+        BlockUI;
+        await download({
+            url: '/xlsx_report',
+            data: action.data,
+            complete: () => unblockUI,
+            error: (error) => self.call('crash_manager', 'rpc_error', error),
+        });
+    }
+    async show_gl(ev) {
+    /**
+    * Shows the General Ledger view by triggering an action.
+    *
+    * @param {Event} ev - The event object triggered by the action.
+    * @returns {Promise} - A promise that resolves to the result of the action.
+    */
+        return this.action.doAction({
+            type: 'ir.actions.client',
+            name: 'General Ledger',
+            tag: 'gen_l',
+        });
+    }
+    formatDate(dateString) {
+    /**
+     * Formats a date string in "YYYY-MM-DD" format to "DD/MM/YYYY" format.
+     *
+     * @param {string} dateString - The date string to be formatted.
+     * @returns {string} The formatted date in "DD/MM/YYYY" format.
+     */
+        const date = new Date(dateString);
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+    gotoJournalItem(ev) {
+        /**
+         * Navigates to the journal items list view based on the selected event target.
+         *
+         * @param {Event} ev - The event object triggered by the action.
+         * @returns {Promise} - A promise that resolves to the result of the action.
+         */
+        return this.action.doAction({
+            type: "ir.actions.act_window",
+            res_model: 'account.move.line',
+            name: "Journal Items",
+            views: [[false, "list"]],
+            domain: [["account_id", "=", parseInt(ev.target.attributes["data-id"].value, 10)]],
+            context: { group_by: ["account_id"] },
+            target: "current",
+        });
+    }
+}
+TrialBalance.template = 'trl_b_template_new';
+actionRegistry.add("trl_b", TrialBalance);
